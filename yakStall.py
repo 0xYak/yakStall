@@ -84,42 +84,55 @@ def listz0rz():
 	print("[6] hashcat")
 	print("[7] WAScan")
 	print("[8] WPScan")
+	print("[9] Netcat")
+
+
+
 	choice = input("Select an option using its number: ")
 	if choice == 1:
 		os.system("sudo apt-get install nmap")
-		menu()
+		listz0rz()
 	elif choice == 2:
 		os.system("sudo apt-get install sqlmap")
-		menu()
+		listz0rz()
 	elif choice == 3:
 		os.system("git clone https://github.com/Und3rf10w/kali-anonsurf.git anonsurf")
 		os.system("cd anonsurf")
 		os.system("chmod +x installer.sh")
 		os.system("bash installer.sh")
-		menu()
+		listz0rz()
 	elif choice == 4:
 		os.system("sudo apt-get install gcc")
-		menu()
+		listz0rz()
 	elif choice == 5:
 		os.system("sudo apt-get install openssh=client && sudo apt-get install openssh-server")
-		menu()
+		listz0rz()
 	elif choice == 6:
 		os.system("git clone https://github.com/hashcat/hashcat.git")
 		print("hashcat installed!")
-		menu()
+		listz0rz()
 	elif choice == 7:
 		os.system("git clone https://github.com/m4ll0k/WAScan.git wascan")
 		os.system("cd wascan")
 		os.system("pip install -r requirements.txt")
 		print("WAScan installed, cd wascan and python wascan.py to use")
-		menu()
+		listz0rz()
 	elif choice == 8:
 		os.system("sudo apt-get install gcc git ruby ruby-dev libcurl4-openssl-dev make zlib1g-dev")
 		os.system("git clone https://github.com/wpscanteam/wpscan.git wpscan")
 		os.system("cd wpscan")
 		os.system("sudo gem install bundler && bundle install --without test")
+		listz0rz()
+	elif choice == 0:
+		print("Returning to main menu...")
 		menu()
+	elif choice == 9:
+		os.system("sudo apt-get install netcat")
 
+		
+	else:
+		print("\nNot\nAn\nOption\nFucking\nRetard")
+		listz0rz()
 
 
 	
